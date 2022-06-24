@@ -1,4 +1,5 @@
 const express = require("express");
+const connectDB = require("./db/connectdb.js");
 const app=express() //method
 const port =3001;
 // router link
@@ -12,6 +13,8 @@ app.set("view engine","ejs")
 // view engine is predefined path  no need to change 
 //to serve static file css,images,js
 app.use(express.static('public'))
+
+connectDB();
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
