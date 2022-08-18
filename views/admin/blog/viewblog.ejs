@@ -32,38 +32,20 @@
                               <th>Id</th>
                                 <th>Title</th>
                                 <th>Description</th>
-                                <th>image</th>
                                 
                             
-                            
-                                <th>Action</th>
+            
                             </tr>
                             <% var i=1 %>
-                            <% data.forEach((item)=>{ %>
-                                <!-- console.log(item) -->
+                           
+                                <!-- console.log(data) -->
                                 <tr>
                                     <td><%= i++ %></td>
-                                    <td><%= item._id %></td>
-                                    <td><%= item.title %></td>
-                                    <td><%= item.description%></td>
-                                    <td><img src="/upload/<%= item.image %>" alt="" width="50" height="50" ></td>
-                                    <td>
-                                        <a href="/blog/viewblog/<%= item._id %>" class="btn btn-info"
-                                            >View</a
-                                          >
-                                          <!--  is uper baali line se apn us view  button par click karne s view k ander usi id k id wise display kra rhe h -->
-                                          <a
-                                          href="/blog/editblog/<%= item._id %>"
-                                          class="btn btn-success"
-                                          >Edit</a
-                                        >
-                                            <a
-                                            href="/admin/deleteblog/<%= item._id %>"
-                                            class="btn btn-danger"
-                                            >Delete</a
-                                          >
-                                  </tr>
-                            <% }) %>
+                                    <td><%= data._id %></td>
+                                    <td><%= data.title %></td>
+                                    <td><%= data.description %></td>
+
+                                   </tr>
                            
                             
                           

@@ -20,15 +20,15 @@
                     <div class="dash-right">
                         <div class="dash-header">
                           <div class="dash-title">
-                              <h1>Create Category</h1>
+                              <h1>Edit Category</h1>
                           </div>
                         </div>
                         <div class="blog-form">
-                            <form action="/categoryinsert" method="post">
+                            <form action="/categoryupdate/<%=data._id %>" method="post">
                             <div class="form-group form-row">
                                 <label class="col-md-3">Category Name<span class="required">*</span></label>
                                 <div class="col-md-9">
-                                  <input name="catname" type="text" class="form-control" placeholder="Title" required>
+                                  <input name="catname" type="text" class="form-control" placeholder="Title" required value="<%= data.catname %>">
                                 </div>
                             </div>
                             <button class="btn btn-success">Submit</button>

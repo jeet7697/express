@@ -20,19 +20,18 @@
                     <div class="dash-right">
                         <div class="dash-header">
                             <div class="dash-title">
-                                <h1>Blogs</h1>
+                                <h1>Contact Query</h1>
                             </div>
-                            <div class="dash-nav">
-                                <a href="/admin/createblog" class="btn btn-success">Add Blog</a>
-                            </div>
+                            
                         </div>
                         <table class="table table-bordered table-striped">
                             <tr>
                                 <th>#No.</th>
-                              <th>Id</th>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>image</th>
+                                <th>name</th>
+                                <th>email</th>
+                             
+                                <th>phone</th>
+                                <th>message</th>
                                 
                             
                             
@@ -43,25 +42,18 @@
                                 <!-- console.log(item) -->
                                 <tr>
                                     <td><%= i++ %></td>
-                                    <td><%= item._id %></td>
-                                    <td><%= item.title %></td>
-                                    <td><%= item.description%></td>
-                                    <td><img src="/upload/<%= item.image %>" alt="" width="50" height="50" ></td>
+                                 
+                                    <td><%= item.name %></td>
+                                    <td><%= item.email %></td>
+                                    <td><%= item.phone %></td>
+                                    <td><%= item.message%></td>
                                     <td>
-                                        <a href="/blog/viewblog/<%= item._id %>" class="btn btn-info"
-                                            >View</a
-                                          >
-                                          <!--  is uper baali line se apn us view  button par click karne s view k ander usi id k id wise display kra rhe h -->
-                                          <a
-                                          href="/blog/editblog/<%= item._id %>"
-                                          class="btn btn-success"
-                                          >Edit</a
-                                        >
-                                            <a
-                                            href="/admin/deleteblog/<%= item._id %>"
-                                            class="btn btn-danger"
-                                            >Delete</a
-                                          >
+                                        <a href="/delete/<%= item._id %>" class="btn btn-danger"
+                                            >Delete</a>
+                                            <a href="/viewcontact/<%= item._id %>" class="btn btn-info"
+                                                ><i class="fa-solid fa-eye"></i>View </a
+                                              ><br />
+                                        </td>
                                   </tr>
                             <% }) %>
                            
@@ -69,7 +61,7 @@
                           
                            
                            
-                           
+       
                         </table>
                     </div>   
                 </div>

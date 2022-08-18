@@ -1,9 +1,24 @@
 const express = require("express");
 const connectDB = require("./db/connectdb.js");
 const app=express() //method
+var session = require('express-session')
+var flash = require('connect-flash');
+
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }
+}))
+app.use(flash())
+
+
 const port =3001;
 // router link
 const web =require("./routes/web.js")
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
 //load router 
 
 //by default path to routes

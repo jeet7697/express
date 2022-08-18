@@ -4,16 +4,15 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="blog-left">
-                    <h1>Sample blog post 1</h1>
+                    <h1><%= data.title %></h1>
                     <div class="posted-on">
-                        <p>by <span>RSGiTECH</span> on <span>October 22, 2018</span></p>
+                        <%= data.createdAt.toLocaleDateString() %>
                     </div>
                     <div class="detail-img">
-                       <img src="assets/images/img1.jpg" alt="blog1" />
+                       <img src="/assets/images/img1.jpg" alt="blog1" />
                     </div>
                     <div class="blog-desc">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                        <%= data.description%>
                     </div>
                 </div>
             </div>
@@ -24,7 +23,7 @@
                         <a href="#">
                             <div class="rb-box">
                                 <div class="rb-box-img">
-                                    <img src="assets/images/img1.jpg" alt="blog1" />
+                                    <img src="/assets/images/download1.jpg" alt="download1" />
                                 </div>
                                 <div class="rb-box-desc">
                                     <h4>Sample blog post 1</h4>
@@ -79,17 +78,32 @@
                     </div>
                      <div class="right-widget categories">
                          <h3>Categories</h3>
-                         <ul>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Culture</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Politics</a></li>
-                            <li><a href="#">Opinion</a></li>
-                            <li><a href="#">Science</a></li>
-                            <li><a href="#">Health</a></li>
-                            <li><a href="#">Style</a></li>
-                            <li><a href="#">Travel</a></li>
+                       
+                           
+
+                            <% var i=1 %>
+                            <% catname.forEach((item)=>{ %>
+                                <!-- console.log(item) -->
+                                <ul>
+                                   
+                                    <li><%= item.catname %></li>
+                                   
+                                    
+                                  </ul>
+                            <% }) %>
+                           
+
+
+
+
+
+
+
+
+
+
+
+
                         </ul>
                      </div>
                 </div>
@@ -97,9 +111,6 @@
         </div>
     </div>
 </section>
-
-
-<h1>hello world</h1>
 
 
 
