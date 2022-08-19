@@ -13,8 +13,7 @@ app.use(session({
 }))
 app.use(flash())
 
-
-const port =3001;
+const port = 3001
 // router link
 const web =require("./routes/web.js")
 var bodyParser = require('body-parser')
